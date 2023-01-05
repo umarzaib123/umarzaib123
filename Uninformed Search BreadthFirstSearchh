@@ -1,0 +1,45 @@
+import queue
+graph = {
+    '5' : ['3', '7'],
+    '3' : ['2', '4'],
+    '7' : ['8'],
+    '2' : [],
+    '4' : ['8'],
+    '8' : []
+}
+
+tupel = (5,(3,7),(2,4),8)
+q = queue.Queue()
+q.queue.clear()
+for tp in tupel:
+    if tp !=0:
+        q.put(tp)
+print(q.queue)
+
+def search(key):
+    if key in graph:
+        print(key,'is in graph')
+    
+    else:x
+        print(key,'is not in graph')
+
+i = input("enter the value: ")
+search(i)
+
+def printchild(key,graph):
+    print(graph[key])
+
+printchild('5',graph)
+import networkx as nx
+import matplotlib.pyplot as plt
+
+G = nx.Graph()
+
+G.add_edge('5', '3')
+G.add_edge('5', '7')
+G.add_edge('3', '2')
+G.add_edge('3', '4')
+G.add_edge('7', '8')
+G.add_edge('4', '8')
+
+nx.draw(G, with_labels=True)
